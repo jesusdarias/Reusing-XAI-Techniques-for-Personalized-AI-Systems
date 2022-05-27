@@ -1,5 +1,3 @@
-# Reusing-XAI-Techniques-for-Personalized-AI-Systems
-
 \begin{appendices}
 \chapter{Using the API with Postman}\label{appendix:appendix1}
 
@@ -7,11 +5,32 @@ This quick guide illustrates how to launch the Flask server and make requests to
 
 \section{Launching the Server}
 
+\subsection{Using Python}
+
+\begin{enumerate}
+    \item Clone the repository.
+    \item From the root folder, create a virtual environment for the installation of the required libraries with:
+            \begin{verbatim}
+                python -m venv .
+            \end{verbatim}
+    
+    \item Use pip to install the dependencies from the requirements file.
+            \begin{verbatim}
+                pip -r requirements.txt
+            \end{verbatim}
+    \item Once all the dependencies have been installed, access the XAI API folder and execute the script with:
+            \begin{verbatim}
+                python app.py
+            \end{verbatim}
+    
+\end{enumerate}
+
+
 \subsection{Using Docker}
 
 \begin{enumerate}
-    \item Clone the repository the desired folder.
-    \item From the specified folder, execute the following command to build a Docker Image:
+    \item Clone the repository.
+    \item From the XAI API folder, execute the following command to build a Docker Image:
             \begin{verbatim}
                 docker build -t <tag_name> .
             \end{verbatim}
@@ -19,25 +38,6 @@ This quick guide illustrates how to launch the Flask server and make requests to
     \item Run the container to launch the server. The -p option maps the port from the container to the real system, to allow making requests to the server.
             \begin{verbatim}
                 docker run -p 5000:5000 <tag_name>
-            \end{verbatim}
-    
-\end{enumerate}
-
-\subsection{Using Python}
-
-\begin{enumerate}
-    \item Create a virtual environment for the installation of the required libraries with:
-            \begin{verbatim}
-                python -m venv <destination_folder>
-            \end{verbatim}
-    \item Clone the repository the destination folder.
-    \item Access the specified folder and use pip to install the dependencies from the requirements file.
-            \begin{verbatim}
-                python pip -r requirements.txt
-            \end{verbatim}
-    \item Once all the dependencies have been installed, execute the script with:
-            \begin{verbatim}
-                python flask_apirest.py
             \end{verbatim}
     
 \end{enumerate}
