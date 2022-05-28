@@ -19,7 +19,7 @@ python -m venv .
 3) Use pip to install the dependencies from the requirements file.
 
 ```console
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
             
 4) Once all the dependencies have been installed, access the XAI API folder and execute the script with:
