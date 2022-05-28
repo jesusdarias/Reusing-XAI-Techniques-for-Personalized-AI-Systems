@@ -71,6 +71,23 @@ The responses to the HTTP requests are given in JSON format. However, most of th
     
 ![ViewerPostman](https://user-images.githubusercontent.com/71895708/170830655-23bb69f2-321d-4851-acb9-d8012b51ae2c.PNG)
     
-    
-    
+## Using the CBR system functions
+
+The instructions are similar to using just the API, but to test the Retriever and Retainer functionalities of the CBR system, it is necessary to install MongoDB and import the case base and explainers description.
+
+1) Follow steps 1 through 3 of launching the server for the API using python.
+2) Install MongoDB. Please, refer to https://www.mongodb.com/docs/manual/installation/. **Note:** by default, MongoDB uses port 27017. Please, do not change this port. Once you have installed it, make sure the service is running. Otherwise, launch it with the **mongod** command.
+3) From the command line (not Mongo), access the CBR system folder and execute the following commands to import the database collections:
+```console
+mongoimport --collection=caseBase --db=xai caseBase.json
+mongoimport --collection=explainers --db=xai explainers.json
+```
+4) Launch the server with:
+
+```console
+python app.py
+``` a 
+5) To use the Retriever function, the approach is similar to making POST requests to the explainer methods. However, the only parameter that is passed in the body of the requests is *params*, which is representative of a target case. Here is an example using Postman:
+
+![Retriever](https://user-images.githubusercontent.com/71895708/170833573-f59286eb-fc38-461f-a097-d6711e0e25b5.PNG)
 
