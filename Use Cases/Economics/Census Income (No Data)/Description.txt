@@ -1,0 +1,11 @@
+{
+  "Domain": "Economics",
+  "DataType": "Tabular",
+  "TrainingData": "No",
+  "AITask": "Classification",
+  "ModelBackend": "TensorFlow2.0",
+  "ModelType": "ANN",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge": "No",
+  "ExplanationScope": "Local"
+}

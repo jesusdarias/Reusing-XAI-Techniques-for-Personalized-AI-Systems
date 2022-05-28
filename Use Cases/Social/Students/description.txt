@@ -1,0 +1,11 @@
+{
+  "Domain": "Social",
+  "DataType": "Tabular",
+  "TrainingData": "Yes",
+  "AITask": "Regression",
+  "ModelBackend": "Sklearn",
+  "ModelType": "SVM",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge":"No",
+  "ExplanationScope": "Global"
+}

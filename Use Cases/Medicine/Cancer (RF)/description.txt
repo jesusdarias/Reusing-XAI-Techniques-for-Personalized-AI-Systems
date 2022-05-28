@@ -1,0 +1,11 @@
+{
+  "Domain": "Medicine",
+  "DataType": "Tabular",
+  "TrainingData": "Yes",
+  "AITask": "Classification",
+  "ModelBackend": "Sklearn",
+  "ModelType": "RF",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge":"No",
+  "ExplanationScope": "Global"
+}

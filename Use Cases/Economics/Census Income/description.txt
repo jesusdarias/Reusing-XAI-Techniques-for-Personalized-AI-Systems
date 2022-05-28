@@ -1,0 +1,11 @@
+{
+  "Domain": "Economics",
+  "DataType": "Tabular",
+  "TrainingData": "Yes",
+  "AITask": "Classification",
+  "ModelBackend": "Sklearn",
+  "ModelType": "KNN",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge":"No",
+  "ExplanationScope": "Global"
+}

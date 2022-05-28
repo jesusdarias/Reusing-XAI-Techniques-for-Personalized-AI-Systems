@@ -1,0 +1,7 @@
+{
+ "instance": [ 0,  1, 17,  1,  0,  1,  2,  1,  2,  1,  3,  1,  1,  0,  1,  1,
+         0,  1,  0,  4,  5,  1,  1,  1,  3,  2,  8, 10,  0,  0,  1,  0,
+         0,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  1,  0],  "backend": "sklearn",
+  "model_task": "regression",
+  "feature_names": ["school", "sex", "age", "address", "famsize", "Pstatus", "Medu", "Fedu", "traveltime", "studytime", "failures", "schoolsup", "famsup", "paid", "activities", "nursery", "higher", "internet", "romantic", "famrel", "freetime", "goout", "Dalc", "Walc", "health", "absences", "G1","G2", "m_m_at_home", "m_m_health", "m_m_other", "m_m_services", "m_m_teacher", "f_f_at_home", "f_f_health", "f_f_other", "f_f_services", "f_f_teacher", "r_r_course", "r_r_home", "r_r_other", "r_r_reputation", "g_g_father", "g_g_mother", "g_g_other"]
+}
