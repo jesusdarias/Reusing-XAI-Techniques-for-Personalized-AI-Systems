@@ -89,5 +89,4 @@ python app.py
 ``` 
 5) To use the Retriever function, the approach is similar to making POST requests to the explainer methods. However, the only parameter that is passed in the body of the requests is *params*, which is representative of a target case. Here is an example using Postman:
 
-![Retriever](https://user-images.githubusercontent.com/71895708/170833573-f59286eb-fc38-461f-a097-d6711e0e25b5.PNG)
-
+![Retriever](https://user-images.githubusercontent.com/71895708/170833985-e65b1336-b8e6-4bfc-8a5b-6a83436c1c25.PNG)
