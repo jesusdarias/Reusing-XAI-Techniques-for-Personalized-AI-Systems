@@ -32,7 +32,7 @@ python app.py
 ##### Using Docker
 
 1) Clone the repository.
-2) From the XAI API folder, execute the following command to build a Docker Image:
+2) From the root folder, execute the following command to build a Docker Image using the Dockerfile:
     
 ```console
 docker build -t <tag_name> .
