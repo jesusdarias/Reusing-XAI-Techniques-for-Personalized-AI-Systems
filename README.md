@@ -76,7 +76,7 @@ The responses to the HTTP requests are given in JSON format. However, most of th
 The instructions are similar to using just the API, but to test the Retriever and Retainer functionalities of the CBR system, it is necessary to install MongoDB and import the case base and explainers description.
 
 1) Follow steps 1 through 3 of launching the server for the API using python.
-2) Install MongoDB. Please, refer to https://www.mongodb.com/docs/manual/installation/. **Note:** by default, MongoDB uses port 27017. Please, do not change this port. Once you have installed it, make sure the service is running. Otherwise, launch it with the *mongod* command.
+2) Install MongoDB. Please, refer to https://www.mongodb.com/docs/manual/installation/. It is also necessary to install the MongoDB Shell: https://www.mongodb.com/try/download/shell. Make sure both of the applications are specifed in the PATH. **Note:** by default, MongoDB uses port 27017. Please, do not change this port. Once you have installed the programs and added them to the PATH, make sure the MongoDB service is running. Otherwise, launch it with the *mongod* command.
 3) From a command line instance (not Mongo), access the CBR system folder and execute the following commands to import the database collections:
 ```console
 mongoimport --collection=caseBase --db=xai caseBase.json
