@@ -1,0 +1,6 @@
+{
+  "backend": "sklearn",
+  "instance": "\nHeck, I remember reading a quote of Luther as something like: 'Jews should\nbe shot like deer.'  And of course much Catholic doctrine for centuries was \nextremely anti-Semitic.\n\n\n",
+  "class_names": ["atheism", "graphics", "ms-windows.misc", "pc.hardware", "mac.hardware", "x", "misc.forsale", "autos", "motorcycles", "baseball", "hockey", "crypt", "electronics", "med", "space", "christian", "guns", "mideast", "politics.misc", "religion.misc"],
+  "top_classes":6
+}

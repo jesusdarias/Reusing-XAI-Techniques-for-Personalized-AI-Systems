@@ -1,0 +1,12 @@
+{
+  "Domain": "Recognition",
+  "DataType": "Image",
+  "TrainingData": "No",
+  "AITask": "Classification",
+  "ModelBackend": "Tensorflow2.0",
+  "ModelType": "ANN",
+  "Black&White": "Yes",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge":"No",
+  "ExplanationScope": "Global"
+}

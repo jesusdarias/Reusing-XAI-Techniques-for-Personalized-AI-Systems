@@ -1,0 +1,11 @@
+{
+  "Domain": "Social",
+  "DataType": "Text",
+  "TrainingData": "No",
+  "AITask": "Classification",
+  "ModelBackend": "Sklearn",
+  "ModelType": "ANN",
+  "DomainKnowledgeLevel": "Expert",
+  "MLKnowledge":"No",
+  "ExplanationScope": "Global"
+}
