@@ -41,7 +41,7 @@ class Retriever(Resource):
             query.update(ModelType="Any")
         if query["TrainingData"] == "Yes":  
             query.pop("TrainingData")
-        if query["DataType"] == "Image" and query["Black&White"]=="No":  
+        if query["DataType"] == "Image" and "Black&White" in query and query["Black&White"]=="No":  
             query.pop("Black&White")
         
         explainers=[]
