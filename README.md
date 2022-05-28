@@ -1,90 +1,76 @@
-\begin{appendices}
-\chapter{Using the API with Postman}\label{appendix:appendix1}
+## Using the API with Postman
 
 This quick guide illustrates how to launch the Flask server and make requests to any of the explanation methods in the API using Postman. The code, requirements, Dockerfile, and example use cases are available in the project's repository.
 
-\section{Launching the Server}
+### Launching the Server
 
-\subsection{Using Python}
+##### Using Python
 
-\begin{enumerate}
-    \item Clone the repository.
-    \item From the root folder, create a virtual environment for the installation of the required libraries with:
-            \begin{verbatim}
-                python -m venv .
-            \end{verbatim}
+1) Clone the repository.
+
+2) From the root folder, create a virtual environment for the installation of the required libraries with:
+
+           
+```console
+python -m venv .
+```
+                
+            
+3) Use pip to install the dependencies from the requirements file.
+
+```console
+pip -r requirements.txt
+```
+            
+4) Once all the dependencies have been installed, access the XAI API folder and execute the script with:
+
+```console
+python app.py
+```
     
-    \item Use pip to install the dependencies from the requirements file.
-            \begin{verbatim}
-                pip -r requirements.txt
-            \end{verbatim}
-    \item Once all the dependencies have been installed, access the XAI API folder and execute the script with:
-            \begin{verbatim}
-                python app.py
-            \end{verbatim}
+
+##### Using Docker
+
+1) Clone the repository.
+2) From the XAI API folder, execute the following command to build a Docker Image:
     
-\end{enumerate}
+```console
+docker build -t <tag_name> .
+```
+The associated tag name you choose will be used to refer to the docker image that will be generated.
 
+3) Run the container to launch the server. The -p option maps the port from the container to the real system, to allow making requests to the server.
 
-\subsection{Using Docker}
-
-\begin{enumerate}
-    \item Clone the repository.
-    \item From the XAI API folder, execute the following command to build a Docker Image:
-            \begin{verbatim}
-                docker build -t <tag_name> .
-            \end{verbatim}
-        The associated tag name you choose will be used to refer to the docker image that will be generated.
-    \item Run the container to launch the server. The -p option maps the port from the container to the real system, to allow making requests to the server.
-            \begin{verbatim}
-                docker run -p 5000:5000 <tag_name>
-            \end{verbatim}
+```console
+docker run -p 5000:5000 <tag_name>
+```
     
-\end{enumerate}
-
-\section{Making Requests}
+### Making Requests
 
 If the server was launched correctly, a similar message to the one in the image should appear, meaning that it is ready to receive requests to the specified address and port.
 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{img/ServerLaunched.PNG}
-\end{figure}
+![ServerLaunched](https://user-images.githubusercontent.com/71895708/170830447-760dce21-69b3-4538-ab37-22f6d058ed1f.PNG)
 
-\begin{enumerate}
-    \item To make requests, open Postman and go to \textit{My Workspace $>$ File $>$ New Tab}.
-    \item To get information about how to use a specific method, we can make a GET request. In the URL bar, specify the address and port of the server, followed by the name of the method, and send the request. The response is displayed in the bottom part of the console. For example, for Tabular/Importance:
+1) To make requests, open Postman and go to *My Workspace > File > New Tab*.
+2) item To get information about how to use a specific method, we can make a GET request. In the URL bar, specify the address and port of the server, followed by the name of the method, and send the request. The response is displayed in the bottom part of the console. For example, for Tabular/Importance:
     
-    \begin{figure}[H]
-\includegraphics[width=\textwidth]{img/GetPostman.PNG}
-\end{figure}
+![GetPostman](https://user-images.githubusercontent.com/71895708/170830521-5fa44c83-c121-4903-9621-d04feb94e121.PNG)
     
-    \item To execute the methods, we have to make a POST request. To do so, change the request type to POST and go to \textit{Body $>$ form-data}. Here is were we specify required parameters, such as the \textit{model} and \textit{data} files, and the \textit{params} object. In this example, I am using the cancer use case model and data. The only parameters included in the \textit{params} object were the \textit{backend} (sklearn) and the \textit{model\_task} (classification).
-    
-        \begin{figure}[H]
-\includegraphics[width=\textwidth]{img/PostPostman.PNG}
-\end{figure}
-    
-\end{enumerate}
+3) To execute the methods, we have to make a POST request. To do so, change the request type to POST and go to *Body > form-data*. Here is where we specify the required parameters, such as the *model* and *data* files, and the *params* object. In this example, I am using the cancer use case model and data. The only parameters included in the *params* object were the *backend* (sklearn) and the *model\_task* (classification).
 
-\subsection{Visualizing Explanations}
+![PostPostman](https://user-images.githubusercontent.com/71895708/170830600-62e2fdea-dc15-4dee-b0eb-9e2c24942b3b.PNG)
+
+
+### Visualizing Explanations
 
 The responses to the HTTP requests are given in JSON format. However, most of the methods return responses that also contain the URLs to plots or graphs of the explanations in HTML or PNG format. Before accessing the explanations, it is necessary to change the default JSON mime-type.
 
-\begin{enumerate}
-    \item To visualize these explanations, click on the URL in the response. It will open a new request tab with the specified URL.
-    \item Go to \textit{Headers} and disable the \textit{Accept} attribute.
-    \item Add a new header with the same name, \textit{Accept}, as key and specify the value according to the type of file you are trying to access. For .png files, specify \textit{image/png}. For .html files, specify \textit{text/html}. Finally, send the request.
+1) To visualize these explanations, click on the URL in the response. It will open a new request tab with the specified URL.
+2) Go to *Headers* and disable the *Accept* attribute.
+3) Add a new header with the same name, *Accept*, as key and specify the value according to the type of file you are trying to access. For .png files, specify *image/png*. For .html files, specify *text/html*. Finally, send the request.
     
-            \begin{figure}[H]
-\includegraphics[width=\textwidth]{img/ViewerPostman.PNG}
-\end{figure}
+![ViewerPostman](https://user-images.githubusercontent.com/71895708/170830655-23bb69f2-321d-4851-acb9-d8012b51ae2c.PNG)
     
     
     
-    
-    
-\end{enumerate}
 
-
-
-\end{appendices}
